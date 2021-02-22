@@ -48,7 +48,7 @@ public class Item {
     @Column(name = "category")
     private String category;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "enclosure_id", referencedColumnName = "id")
     private Enclosure enclosure;
 
