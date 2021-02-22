@@ -1,4 +1,4 @@
-package ru.debuffi.rsservice.client;
+package ru.debuffi.rssservice.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,5 +14,5 @@ import generated.Rss;
 public interface LentaClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/rss")
-    Rss getLentaNews();
+    Rss getRss();
 }

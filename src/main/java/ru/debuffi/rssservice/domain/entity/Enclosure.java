@@ -1,5 +1,6 @@
-package ru.debuffi.rsservice.domain.entity;
+package ru.debuffi.rssservice.domain.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,15 +16,20 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @Entity
-@Table(name = "enclosures")
 @EqualsAndHashCode
+@Table(name = "enclosures")
 public class Enclosure {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "url")
     private String url;
+
+    @Column(name = "type")
     private String type;
+
+    @Column(name = "lenght")
     private Long length;
 }

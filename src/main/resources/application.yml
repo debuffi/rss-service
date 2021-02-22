@@ -1,7 +1,7 @@
 server:
   port: 8888
   servlet:
-    context-path: /rss-parser
+    context-path: /rss-service
 
 spring:
   datasource:
@@ -14,15 +14,20 @@ spring:
       path: /db
       enabled: true
   jpa:
+    hibernate.ddl-auto: create
     database-platform: org.hibernate.dialect.H2Dialect
 
 feign:
   client:
     lenta:
       name: lenta
-      url: http://lenta.ru
+      url: https://lenta.ru
 
 scheduler:
   lenta:
     delay:
       seconds: 600
+
+logging:
+  level:
+    ru.debuffi.rssservice: DEBUG

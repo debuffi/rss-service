@@ -1,4 +1,4 @@
-package ru.debuffi.rsservice;
+package ru.debuffi.rssservice;
 
 import java.util.Arrays;
 
