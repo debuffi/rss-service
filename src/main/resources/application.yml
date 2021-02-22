@@ -1,0 +1,28 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /rss-parser
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 1234
+  h2:
+    console:
+      path: /db
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+feign:
+  client:
+    lenta:
+      name: lenta
+      url: http://lenta.ru
+
+scheduler:
+  lenta:
+    delay:
+      seconds: 600
